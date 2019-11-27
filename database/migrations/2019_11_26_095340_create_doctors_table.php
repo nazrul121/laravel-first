@@ -17,7 +17,7 @@ class CreateDoctorsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('reg');
-            $table->string('photo');
+            $table->string('photo')->nullable();
             $table->text('education');
             $table->enum('is_active', ['1', '0'])->default('1');
             $table->unsignedBigInteger('user_id');
